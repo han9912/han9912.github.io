@@ -1,35 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Blog</title>
-        <link rel="stylesheet" href="blog.css">
-        <style>
-            body {
-            background-color: #faf2e4;
-            margin: 0 15%;
-            font-family: sans-serif;
-            }
-
-            h1 {
-            text-align: center;
-            font-family: serif;
-            font-weight: normal;
-            text-transform: uppercase;
-            border-bottom: 1px solid #57b1dc;
-            margin-top: 30px;
-            }
-
-            h2 {
-            color: #d1633c;
-            font-size: 1em;
-            }
-
-            p {
-            font-style: serif;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     </head>
     <body>
+        <div id="nav-placeholder"></div>
+        <script>
+        $(function(){
+          $("#nav-placeholder").load("nav.html");
+        });
+        </script>
         <span class="page-title" >A demo of blog by 行健 </span>
         <hr>
         <h1> <em>Inlitement</em> meaning </h1>
@@ -52,7 +36,7 @@
                 <li>Study politics for a master degree</li>
                 
             </ol>
-            <a href="https://google.hk"><img src="https://www.google.com.hk/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png" alt=""></a>
+            <a href="https://google.hk" title="GOOGLELogo"><img src="https://www.google.com.hk/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png" alt=""></a>
         </div>
     </body>
 </html>
