@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        function setHref() {
+            for (const addressElement of document.getElementsByClassName('host-address')){
+                addressElement.href = "http://" + window.location.hostname + ":2222/ssh/host/" + addressElement.textContent;
+            }
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <title>WebSSH2 Portal</title>
+</head>
+<body onload="setHref()">
+    <div id="nav-placeholder"></div>
+    <script>
+    $(function(){
+      $("#nav-placeholder").load("../nav.html");
+    });
+    </script>
+    <h1>Portal of WebSSH2</h1>
+    <h2 id="">List of SSH sessions</h2>
+    <div id="sshlist"></div>
+
+    <h2>List of Telnet sessions</h2>
+    <div id="telnetlist">Not supported yet</div>
+    <script src="index.js"></script>
+</body>
+</html>
